@@ -56,19 +56,6 @@ from sklearn.ensemble import RandomForestClassifier
 import xgboost as xgb
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.neighbors.base module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.neighbors. Anything that cannot be imported from sklearn.neighbors is now part of the private API.
-      warnings.warn(message, FutureWarning)
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.ensemble.bagging module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.ensemble. Anything that cannot be imported from sklearn.ensemble is now part of the private API.
-      warnings.warn(message, FutureWarning)
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.ensemble.base module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.ensemble. Anything that cannot be imported from sklearn.ensemble is now part of the private API.
-      warnings.warn(message, FutureWarning)
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.ensemble.forest module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.ensemble. Anything that cannot be imported from sklearn.ensemble is now part of the private API.
-      warnings.warn(message, FutureWarning)
-    Using TensorFlow backend.
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.utils.testing module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.utils. Anything that cannot be imported from sklearn.utils is now part of the private API.
-      warnings.warn(message, FutureWarning)
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:143: FutureWarning: The sklearn.metrics.classification module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.metrics. Anything that cannot be imported from sklearn.metrics is now part of the private API.
-      warnings.warn(message, FutureWarning)
 
 
 # Data Collection
@@ -1450,9 +1437,6 @@ sm = SMOTE(sampling_strategy='auto', random_state=27)
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
-
 
 ## Baseline Model
 
@@ -1463,8 +1447,6 @@ dummy = DummyClassifier().fit(X_train, y_train)
 dummy_pred = dummy.predict(X_test)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/dummy.py:132: FutureWarning: The default value of strategy will change from stratified to prior in 0.24.
-      "stratified to prior in 0.24.", FutureWarning)
 
 
 
@@ -1504,9 +1486,6 @@ plt.show()
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_state=27)
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
-
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -1574,22 +1553,12 @@ confusion_matrix(y_test,y_pred_acc)
 
 ```
 
-    Fitting 5 folds for each of 16 candidates, totalling 80 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:    5.8s
-
-
     Accuracy Score : 0.9355932203389831
     Precision Score : 0.2907662082514735
     Recall Score : 1.0
     F1 Score : 0.4505327245053272
 
 
-    [Parallel(n_jobs=-1)]: Done  80 out of  80 | elapsed:   14.1s finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
 
@@ -1635,8 +1604,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -1703,21 +1670,12 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 16 candidates, totalling 80 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-
 
     Accuracy Score : 0.9350579839429081
     Precision Score : 0.2890625
     Recall Score : 1.0
     F1 Score : 0.4484848484848485
 
-
-    [Parallel(n_jobs=-1)]: Done  80 out of  80 | elapsed:    6.2s finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
 
@@ -1764,9 +1722,6 @@ plt.show()
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_state=27)
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
-
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -1831,15 +1786,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 64 candidates, totalling 320 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:  3.0min
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed: 19.1min
-    [Parallel(n_jobs=-1)]: Done 320 out of 320 | elapsed: 27.0min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
     Accuracy Score : 0.9525423728813559
@@ -1881,8 +1827,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -1947,15 +1891,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 64 candidates, totalling 320 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:   44.0s
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:  7.0min
-    [Parallel(n_jobs=-1)]: Done 320 out of 320 | elapsed: 10.3min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
     Accuracy Score : 0.959678858162355
@@ -2044,10 +1979,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
-
-
 
 ```python
 scaler = StandardScaler()
@@ -2127,18 +2058,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 480 candidates, totalling 2400 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  76 tasks      | elapsed:    4.3s
-    [Parallel(n_jobs=-1)]: Done 376 tasks      | elapsed:   25.2s
-    [Parallel(n_jobs=-1)]: Done 744 tasks      | elapsed:   55.9s
-    [Parallel(n_jobs=-1)]: Done 1930 tasks      | elapsed:  1.7min
-    [Parallel(n_jobs=-1)]: Done 2400 out of 2400 | elapsed:  1.8min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
-
 
     Accuracy Score : 0.9371989295272078
     Precision Score : 0.296
@@ -2182,9 +2101,6 @@ best_parameters
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_state=27)
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
-
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -2250,17 +2166,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 480 candidates, totalling 2400 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:    3.5s
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:   15.8s
-    [Parallel(n_jobs=-1)]: Done 442 tasks      | elapsed:   31.5s
-    [Parallel(n_jobs=-1)]: Done 1434 tasks      | elapsed:  1.1min
-    [Parallel(n_jobs=-1)]: Done 2400 out of 2400 | elapsed:  1.6min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
     Accuracy Score : 0.9370205173951829
@@ -2308,8 +2213,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -2377,19 +2280,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 480 candidates, totalling 2400 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:    6.3s
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:   29.8s
-    [Parallel(n_jobs=-1)]: Done 442 tasks      | elapsed:  1.1min
-    [Parallel(n_jobs=-1)]: Done 792 tasks      | elapsed:  1.9min
-    [Parallel(n_jobs=-1)]: Done 1242 tasks      | elapsed:  3.0min
-    [Parallel(n_jobs=-1)]: Done 1792 tasks      | elapsed:  4.2min
-    [Parallel(n_jobs=-1)]: Done 2400 out of 2400 | elapsed:  5.5min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
     Accuracy Score : 0.9384478144513827
@@ -2435,8 +2325,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -2510,20 +2398,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 480 candidates, totalling 2400 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:    5.2s
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:   25.6s
-    [Parallel(n_jobs=-1)]: Done 442 tasks      | elapsed:  1.1min
-    [Parallel(n_jobs=-1)]: Done 792 tasks      | elapsed:  2.0min
-    [Parallel(n_jobs=-1)]: Done 1242 tasks      | elapsed:  3.1min
-    [Parallel(n_jobs=-1)]: Done 1792 tasks      | elapsed:  4.3min
-    [Parallel(n_jobs=-1)]: Done 2400 out of 2400 | elapsed:  5.6min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
-
 
     Accuracy Score : 0.9384478144513827
     Precision Score : 0.2985685071574642
@@ -2570,8 +2444,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -2637,18 +2509,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 192 candidates, totalling 960 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:  2.0min
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:  7.5min
-    [Parallel(n_jobs=-1)]: Done 442 tasks      | elapsed: 17.1min
-    [Parallel(n_jobs=-1)]: Done 792 tasks      | elapsed: 33.9min
-    [Parallel(n_jobs=-1)]: Done 960 out of 960 | elapsed: 42.7min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
-
 
     Accuracy Score : 0.9789473684210527
     Precision Score : 0.6209677419354839
@@ -2693,8 +2553,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.25,random_s
 X_train, y_train = sm.fit_sample(X_train, y_train)
 ```
 
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/utils/deprecation.py:86: FutureWarning: Function safe_indexing is deprecated; safe_indexing is deprecated in version 0.22 and will be removed in version 0.24.
-      warnings.warn(msg, category=FutureWarning)
 
 
 
@@ -2760,17 +2618,6 @@ print('F1 Score : ' + str(f1_score(y_test,y_pred_acc)))
 confusion_matrix(y_test,y_pred_acc)
 ```
 
-    Fitting 5 folds for each of 192 candidates, totalling 960 fits
-
-
-    [Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
-    [Parallel(n_jobs=-1)]: Done  42 tasks      | elapsed:  1.7min
-    [Parallel(n_jobs=-1)]: Done 192 tasks      | elapsed:  7.1min
-    [Parallel(n_jobs=-1)]: Done 442 tasks      | elapsed: 18.8min
-    [Parallel(n_jobs=-1)]: Done 792 tasks      | elapsed: 37.4min
-    [Parallel(n_jobs=-1)]: Done 960 out of 960 | elapsed: 46.6min finished
-    /opt/anaconda3/envs/learn-env/lib/python3.6/site-packages/sklearn/model_selection/_search.py:849: FutureWarning: The parameter 'iid' is deprecated in 0.22 and will be removed in 0.24.
-      "removed in 0.24.", FutureWarning
 
 
     Accuracy Score : 0.9780553077609278
